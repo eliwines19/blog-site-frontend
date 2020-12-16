@@ -1,0 +1,35 @@
+.navbar-div {
+    padding: 10px;
+    display: flex;
+    background: rgb(189, 189, 255);
+    justify-content: center;
+}
+
+.navbar-div a {
+    font-size: larger;
+    transition: 0.1s;
+    transition-timing-function: ease;
+    border-radius: 50%;
+    color: rgb(10, 10, 10);
+    padding: 15px 10px 15px 10px;
+    margin: 10px 10px 10px 10px;
+}
+
+.navbar-div a:link {
+    text-decoration: none;
+}
+
+.navbar-div a:visited {
+
+}
+
+/* .navbar-div a:active {
+    color: white;
+} */
+
+.navbar-div a:hover {
+    color: rgb(10, 10, 10);
+    background: rgb(255, 255, 255);
+    /* border-style: solid; */
+    border-color: rgb(10, 10, 10);
+}

@@ -6,8 +6,8 @@ class Home extends React.Component {
   render(){
     return (
       <div>
-        title for website
         <Navbar />
+        title for website
       </div>
     )
   }
