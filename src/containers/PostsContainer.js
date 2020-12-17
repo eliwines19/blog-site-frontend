@@ -1,15 +1,30 @@
 import React from 'react';
-import { fetchPosts } from '../actions/PostActions';
 
 class PostsContainer extends React.Component{
 
+    constructor(){
+        super();
+        this.state = {}
+    }
+
+    fetchPosts = () => {
+        fetch('http://localhost:3001/posts')
+        .then(resp => resp.json())
+        .then(json => {
+            this.setState({
+                posts: json.data
+            })
+        })
+    }
+
     componentDidMount(){
-        fetchPosts();
+        this.fetchPosts();
     }
 
     render(){
         return(
             <div>
+                {console.log(this.state)}
                 PostsContainer
             </div>
         )
