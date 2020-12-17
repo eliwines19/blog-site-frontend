@@ -1,0 +1,32 @@
+.all-posts-div {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-size: cover;
+}
+
+.post-box {
+    text-decoration: none;
+    border: #2F2F2F solid;
+    margin: 1rem 1rem 1rem 1rem;
+    background: #FDFFFF;
+    opacity: 90%;
+    color: #2F2F2F;
+    width: 25rem;
+    height: auto;
+}
+
+.post-content {
+    margin: 1rem 1rem 1rem 1rem;
+}
+
+/* #post-title {
+    
+} */
+
+/* #post-content {
+
+} */
+
+/* #post-date {
+
+} */

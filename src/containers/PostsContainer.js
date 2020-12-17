@@ -1,11 +1,9 @@
 import React from 'react';
+import Post from '../Post';
 
 class PostsContainer extends React.Component{
 
-    constructor(){
-        super();
-        this.state = {}
-    }
+    state = {}
 
     fetchPosts = () => {
         fetch('http://localhost:3001/posts')
@@ -21,11 +19,34 @@ class PostsContainer extends React.Component{
         this.fetchPosts();
     }
 
+    checkForPosts = () => {
+        const { posts } = this.state;
+        if(posts !== undefined){
+            console.log('posts!')
+            return(
+                this.renderPosts(posts)
+            )
+        }else{
+            console.log('no posts')
+        }
+    }
+
+    renderPosts = (posts) => {
+        return(
+            <div className="all-posts-div">
+                {posts.map(post => {
+                    return (
+                        <Post post={post}/>
+                    )
+                })}
+            </div>
+        )
+    }
+
     render(){
         return(
             <div>
-                {console.log(this.state)}
-                PostsContainer
+                {this.checkForPosts()}
             </div>
         )
     }

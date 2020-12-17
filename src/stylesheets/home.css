@@ -6,7 +6,8 @@ body {
 }
 
 .main-title {
-    color: #2F2F2F;
+    color: #FDFFFF;
+    text-align: center;
 }
 
 .main-title:hover {
