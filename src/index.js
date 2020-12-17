@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Home from './Home';
 import About from './About';
-import Posts from './Posts';
+import PostsPage from './PostsPage';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 ReactDOM.render(
@@ -11,7 +11,7 @@ ReactDOM.render(
       <div className="app-div">
         <Route path="/" component={Home}/>
         <Route exact path="/about" component={About}/>
-        <Route exact path="/posts" component={Posts}/>
+        <Route exact path="/posts" component={PostsPage}/>
       </div>
     </Router>
   </React.StrictMode>,
