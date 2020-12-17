@@ -1,7 +1,7 @@
 .navbar-div {
     padding: 10px;
     display: flex;
-    background: rgb(189, 189, 255);
+    background: #aa529a;
     justify-content: center;
 }
 
@@ -11,7 +11,7 @@
     transition-timing-function: ease;
     border-radius: 50%;
     color: rgb(10, 10, 10);
-    padding: 15px 10px 15px 10px;
+    padding: 20px 15px 20px 15px;
     margin: 10px 10px 10px 10px;
 }
 

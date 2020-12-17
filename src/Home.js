@@ -7,7 +7,7 @@ class Home extends React.Component {
     return (
       <div>
         <Navbar />
-        title for website
+        <h1>Blog Website</h1>
       </div>
     )
   }
