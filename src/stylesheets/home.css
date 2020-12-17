@@ -1,0 +1,14 @@
+body {
+    background-image: url("https://images.pexels.com/photos/2365457/pexels-photo-2365457.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+    height: auto;
+        background-size: cover;
+        background-color: #cccccc;
+}
+
+.main-title {
+    color: #2F2F2F;
+}
+
+.main-title:hover {
+    cursor: default;
+}

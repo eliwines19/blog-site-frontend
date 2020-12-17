@@ -1,5 +1,6 @@
 import React from 'react';
-import Navbar from './Navbar'
+import './stylesheets/home.css';
+import Navbar from './Navbar';
 
 class Home extends React.Component {
 
@@ -7,7 +8,7 @@ class Home extends React.Component {
     return (
       <div>
         <Navbar />
-        <h1>Blog Website</h1>
+        <h1 className="main-title">Blog Website Name</h1>
       </div>
     )
   }
