@@ -1,17 +1,19 @@
 import React from 'react';
 import './stylesheets/post.css';
+import { Route, Link } from 'react-router-dom';
+import PostShow from './PostShow';
 
 class Post extends React.Component{
 
     renderPost = () => {
         const post = this.props.post
         return(
-                <a className="post-box" href="about">
-                    <h2 className="post-content" id="post-title">{post.attributes.title}</h2>
-                    {this.renderPostContent(post.attributes.content)}
-                    {this.renderPostDate(post.attributes.created_at)}
-                    <h4 className="post-content">Click to keep reading</h4>
-                </a>
+            <Link className="post-box" to={`/posts/${post.id}`}>
+                <h2 className="post-content" id="post-title">{post.attributes.title}</h2>
+                {this.renderPostContent(post.attributes.content)}
+                {this.renderPostDate(post.attributes.created_at)}
+                <h4 className="post-content">Click to keep reading</h4>
+            </Link>
         )
     }
 
@@ -37,7 +39,10 @@ class Post extends React.Component{
 
     render(){
         return(
-            this.renderPost()
+            <>
+                <Route path={`/posts/:postId`} component={PostShow} />
+                {this.renderPost()}
+            </>
         )
     }
 }

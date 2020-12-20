@@ -36,7 +36,7 @@ class PostsContainer extends React.Component{
             <div className="all-posts-div">
                 {posts.map(post => {
                     return (
-                        <Post post={post}/>
+                        <Post key={post.id} post={post}/>
                     )
                 })}
             </div>

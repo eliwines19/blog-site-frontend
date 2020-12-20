@@ -11,7 +11,7 @@ ReactDOM.render(
       <div className="app-div">
         <Route path="/" component={Home}/>
         <Route exact path="/about" component={About}/>
-        <Route exact path="/posts" component={PostsPage}/>
+        <Route path="/posts" render={routerProps => <PostsPage {...routerProps} />} />
       </div>
     </Router>
   </React.StrictMode>,
