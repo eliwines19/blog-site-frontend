@@ -1,5 +1,4 @@
 import React from 'react';
-import Post from './Post';
 import Home from './Home';
 import About from './About';
 import PostsPage from './PostsPage';
@@ -49,7 +48,7 @@ class App extends React.Component{
 
     render(){
         return(
-            <div className="all-posts-div">
+            <div>
                 {this.checkForPosts()}
             </div>
         )

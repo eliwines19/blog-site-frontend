@@ -8,14 +8,13 @@ class PostsPage extends React.Component{
     render(){
         const { posts, match } = this.props;
         return (
-            <div>
-                {/* <PostsContainer /> */}
+            <>
                 <PostsList posts={posts} />
                 <Route
                     path={`${match.url}/:postId`}
                     render={routerProps => <PostShow {...routerProps} posts={posts}/>}
                 />
-            </div>
+            </>
         )
     }
 
