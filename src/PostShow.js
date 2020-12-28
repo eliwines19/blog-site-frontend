@@ -3,10 +3,10 @@ import React from 'react';
 class PostShow extends React.Component{
 
     render(){
-        console.log('rendered post show page')
+        const { match, posts } = this.props;
         return(
             <div>
-                <h3>Post show component</h3>
+                <h3>{posts[match.params.postId - 1].attributes.title}</h3>
             </div>
         )
     }

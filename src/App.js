@@ -1,7 +1,11 @@
 import React from 'react';
-import Post from '../Post';
+import Post from './Post';
+import Home from './Home';
+import About from './About';
+import PostsPage from './PostsPage';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-class PostsContainer extends React.Component{
+class App extends React.Component{
 
     state = {}
 
@@ -33,24 +37,23 @@ class PostsContainer extends React.Component{
 
     renderPosts = (posts) => {
         return(
-            <div className="all-posts-div">
-                {posts.map(post => {
-                    return (
-                        <Post key={post.id} post={post}/>
-                    )
-                })}
+            <div>
+                <Router>
+                    <Route path="/" component={Home}/>
+                    <Route exact path="/about" component={About}/>
+                    <Route path="/posts" render={routerProps => <PostsPage {...routerProps} posts={posts} />} />
+                </Router>
             </div>
         )
     }
 
     render(){
         return(
-            <div>
+            <div className="all-posts-div">
                 {this.checkForPosts()}
             </div>
         )
     }
-
 }
 
-export default PostsContainer;
+export default App
