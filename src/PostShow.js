@@ -6,7 +6,7 @@ class PostShow extends React.Component{
         const { match, posts } = this.props;
         return(
             <div>
-                <h3>{posts[match.params.postId - 1].attributes.title}</h3>
+                <h3 id="post-show-title">{posts[match.params.postId - 1].attributes.title}</h3>
             </div>
         )
     }

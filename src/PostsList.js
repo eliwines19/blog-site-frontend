@@ -4,8 +4,12 @@ import { Link } from 'react-router-dom';
 
 class PostsList extends React.Component{
 
+    // scrolls to the bottom of the last link (aka where the post show starts)
     handleClick = (e) => {
-        window.scrollBy(0, document.body.scrollHeight);
+        let allLinks = document.querySelectorAll('.post-box');
+        let lastLink = allLinks[allLinks.length - 1];
+        let linkCoordinate = lastLink.getBoundingClientRect();
+        window.scrollBy(0, linkCoordinate.bottom);
     }
 
     renderPosts = () => {
@@ -13,7 +17,7 @@ class PostsList extends React.Component{
             <div className="all-posts-div">
                 {this.props.posts.map(post => {
                     return(
-                        <Link onClick={this.handleClick()} key={post.id} className="post-box" to={`/posts/${post.id}`}>
+                        <Link onClick={() => this.handleClick()} key={post.id} className="post-box" to={`/posts/${post.id}`}>
                             <h2 className="post-content" id="post-title">{post.attributes.title}</h2>
                             {this.renderPostContent(post.attributes.content)}
                             {this.renderPostDate(post.attributes.created_at)}
@@ -25,6 +29,7 @@ class PostsList extends React.Component{
         )
     }
 
+    // only shows the first 100 characters of the post
     renderPostContent = (content) => {
         const newContentStr = content.slice(0, 100)
         return(
