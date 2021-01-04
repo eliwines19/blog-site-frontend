@@ -8,8 +8,11 @@
     text-align: center;
 }
 
-#post-show-date {
-    padding: 1rem 1rem 1rem 1rem;
+#post-show-button {
+    background: #2F2F2F;
+    padding: 0.5rem;
+    color: #FDFFFF;
+    border: solid #2F2F2F;
 }
 
 #post-show-content {

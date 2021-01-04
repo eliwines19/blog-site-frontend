@@ -4,7 +4,11 @@ import './stylesheets/post-show.css';
 class PostShow extends React.Component{
 
     scrollToPost = () => {
-        window.scrollTo(0, document.body.scrollHeight + 100)
+        window.scrollTo(0, document.body.scrollHeight)
+    }
+
+    scrollToTop = () => {
+        window.scrollTo(0, 0);
     }
 
     renderPost = () => {
@@ -12,7 +16,10 @@ class PostShow extends React.Component{
         let currentPost = posts[match.params.postId - 1];
         return (
             <div className="post-show-all-content">
-                {this.renderPostDate(currentPost.attributes.created_at)}
+                <div className="post-show-top-content">
+                    <button onClick={() => this.scrollToTop()} id="post-show-button">Back To Top</button>
+                    {this.renderPostDate(currentPost.attributes.created_at)}
+                </div>
                 <h1 id="post-show-title">{currentPost.attributes.title}</h1>
                 <p id="post-show-content">{currentPost.attributes.content}</p>
             </div>
