@@ -8,7 +8,7 @@ class Navbar extends React.Component{
         return (
             <div className="navbar-div">
                 <NavLink to="/">Home</NavLink>
-                <NavLink to="/posts">Posts</NavLink>
+                <NavLink to="/posts/1">Posts</NavLink>
                 <NavLink to="/about" className="about-nav">About</NavLink>
             </div>
         )

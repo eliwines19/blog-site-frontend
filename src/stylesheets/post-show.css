@@ -1,0 +1,18 @@
+.post-show-all-content {
+    background: #FDFFFF;
+    border: solid #2F2F2F;
+    margin: 1rem 5rem 1rem 5rem;
+}
+
+#post-show-title {
+    text-align: center;
+}
+
+#post-show-date {
+    padding: 1rem 1rem 1rem 1rem;
+}
+
+#post-show-content {
+    line-height: 2;
+    padding: 1rem 3rem 1rem 3rem;
+}
